@@ -4,6 +4,14 @@
 
   .intro {
 
+    .main-header-image {
+      width: 100%;
+      margin: 0 auto;
+        img {
+          border-radius: 5px;
+        }
+    }
+
     h2 {
       padding: 15px;
     }
@@ -58,6 +66,20 @@
       }
 
       .btn {
+        width: 30%;
+        text-align: center;
+        .button(2rem, @sea-shell, @btn-bg-color, 1% 1%);
+
+        @keyframes fadetoblack {
+          0% {background-color:@btn-bg-color; left:0px; top:0px;}
+          50% {background-color:@waterloo; left:10px; top:0px;}
+          100% {background-color:@btn-bg-color; left:0px; top:0px;}
+          }
+
+          &:hover {
+            .animation();
+            color:@btn-bg-color;
+          }
       }
     }
 
