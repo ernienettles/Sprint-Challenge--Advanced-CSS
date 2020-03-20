@@ -136,6 +136,7 @@ html,
 body {
   font-family: 'Ubuntu', sans-serif;
   color: #5E6164;
+  max-width: 100%;
 }
 h1,
 h2,
@@ -183,11 +184,22 @@ p {
   flex-flow: row;
   margin: 1% auto;
 }
+@media (max-width: 500px) {
+  .navigation .navbar {
+    width: 80%;
+    margin: 2% auto;
+  }
+}
 .navigation .navbar a {
   font-size: 1.5rem;
   width: 20%;
   text-decoration: none;
   color: black;
+}
+@media (max-width: 500px) {
+  .navigation {
+    width: 100%;
+  }
 }
 footer {
   color: #22283B;
@@ -200,10 +212,15 @@ footer {
   align-items: center;
 }
 .home .intro .main-header-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
   width: 100%;
   margin: 0 auto;
 }
 .home .intro .main-header-image img {
+  width: 100%;
   border-radius: 5px;
 }
 .home .intro h2 {
@@ -216,6 +233,18 @@ footer {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+}
+@media (max-width: 500px) {
+  .home .space-images #image1 {
+    width: 90%;
+    margin: 3% auto;
+  }
+  .home .space-images #image2 {
+    display: none;
+  }
+  .home .space-images #image3 {
+    display: none;
+  }
 }
 .home .space-images img {
   width: 28%;
@@ -239,8 +268,22 @@ footer {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .home .walk {
+    flex-flow: row wrap;
+    width: 95%;
+    padding: 2% 2%;
+    margin: 0 auto;
+  }
+}
 .home .walk .walk-text {
   width: 50%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text {
+    width: 100%;
+    margin: 2% 0;
+  }
 }
 .home .walk .walk-text h3 {
   margin-bottom: 10px;
@@ -256,6 +299,12 @@ footer {
   color: #F1F1F1;
   border-radius: 4px;
   padding: 1% 1%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text .btn {
+    width: 100%;
+    padding: 5% 1%;
+  }
 }
 @keyframes fadetoblack {
   0% {
@@ -284,6 +333,13 @@ footer {
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    order: -1;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 .home .walk .walk-img img {
   width: 100%;

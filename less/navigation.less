@@ -15,11 +15,19 @@
                 width: 40%;
                 .flex(space-around, center, row);
                 margin: 1% auto;
+                    @media @mobile {
+                        width: 80%;
+                        margin: 2% auto;
+                    }
                     a {
                         font-size: 1.5rem;
                         width: 20%;
                         text-decoration: none;
                         color: black;
                     }
+            }
+
+            @media @mobile {
+                width: 100%;
             }
 }

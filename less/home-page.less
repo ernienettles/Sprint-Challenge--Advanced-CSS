@@ -5,9 +5,11 @@
   .intro {
 
     .main-header-image {
+      .flex (center, center, row);
       width: 100%;
       margin: 0 auto;
         img {
+          width: 100%;
           border-radius: 5px;
         }
     }
@@ -26,6 +28,21 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+      @media @mobile {
+
+        #image1 {
+          width: 90%;
+          margin: 3% auto;
+        }
+
+        #image2 {
+          display: none;
+        }
+
+        #image3 {
+          display: none;
+        }
+      }
 
     img {
       width: 28%;
@@ -53,9 +70,19 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+      @media @mobile {
+        flex-flow: row wrap;
+        width: 95%;
+        padding: 2% 2%;
+        margin: 0 auto;
+      }
 
     .walk-text {
       width: 50%;
+        @media @mobile {
+          .width();
+          margin: 2% 0;
+        }
 
       h3 {
         margin-bottom: 10px;
@@ -69,6 +96,10 @@
         width: 30%;
         text-align: center;
         .button(2rem, @sea-shell, @btn-bg-color, 1% 1%);
+        @media @mobile {
+          .width();
+          padding: 5% 1%;
+        }
 
         @keyframes fadetoblack {
           0% {background-color:@btn-bg-color; left:0px; top:0px;}
@@ -86,6 +117,12 @@
     .walk-img {
       width: 46%;
       margin-left: 4%;
+
+      @media @mobile {
+        order: -1;
+        .width();
+        margin: 0 auto;
+      }
       
       img {
         width: 100%;
