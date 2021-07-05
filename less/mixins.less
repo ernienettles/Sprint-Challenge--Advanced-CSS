@@ -1,1 +1,27 @@
 // Mixins Here
+
+.button(@fontsize, @color, @bgcolor, @padding) {
+    font-size: @fontsize;
+    background-color: @bgcolor;
+    color: @color;
+    border-radius: 4px;
+    padding: @padding;
+}
+
+.flex(@justify, @align, @flow) {
+    display:flex;
+    justify-content: @justify;
+    align-items: @align;
+    flex-flow: @flow;
+}
+
+.width() {
+	width: 100%;
+}
+
+.animation() {
+    animation-name: fadetoblack;
+    animation-duration: .5s;
+    position: relative;
+    color: #EDF5E1;
+}

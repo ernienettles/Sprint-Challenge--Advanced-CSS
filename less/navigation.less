@@ -1,1 +1,33 @@
 // Navigation code here
+
+.navigation {
+    .flex (center, center, row wrap);
+    background-color: #F6F6F6;
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+        .logo {
+            .width();
+            font-size: 3rem;
+            margin-top: .5%;
+        }
+            .navbar {
+                width: 40%;
+                .flex(space-around, center, row);
+                margin: 1% auto;
+                    @media @mobile {
+                        width: 80%;
+                        margin: 2% auto;
+                    }
+                    a {
+                        font-size: 1.5rem;
+                        width: 20%;
+                        text-decoration: none;
+                        color: black;
+                    }
+            }
+
+            @media @mobile {
+                width: 100%;
+            }
+}
